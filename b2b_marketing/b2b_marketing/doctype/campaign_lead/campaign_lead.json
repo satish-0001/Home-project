@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2019-12-09 13:03:24.639755",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign",
+  "last_audit_date",
+  "quality_rating",
+  "quality_views",
+  "last_quality_date",
+  "cb1",
+  "naming_series",
+  "call",
+  "sb1",
+  "contact",
+  "title",
+  "department",
+  "address",
+  "phone_number",
+  "cb2",
+  "seniority",
+  "mobile_phone",
+  "corporate_phone",
+  "email",
+  "additional_email",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign",
+   "options": "Campaigns",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "call",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Call Info",
+   "options": "Call",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Campaign Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "options": "Department Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contact.address",
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.phone",
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "Lead -"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Campaign Lead",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Data",
+   "label": "Last Audit Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_rating",
+   "fieldtype": "Rating",
+   "label": "Quality Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_quality_date",
+   "fieldtype": "Date",
+   "label": "Last Quality Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_views",
+   "fieldtype": "Int",
+   "label": "Quality Views",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.mobile_phone",
+   "fieldname": "mobile_phone",
+   "fieldtype": "Data",
+   "label": "Mobile Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.corporate_phone",
+   "fieldname": "corporate_phone",
+   "fieldtype": "Data",
+   "label": "Corporate Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "options": "Title Table",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.seniority",
+   "fieldname": "seniority",
+   "fieldtype": "Data",
+   "label": "Seniority",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.additional_email",
+   "fieldname": "additional_email",
+   "fieldtype": "Data",
+   "label": "Additional Email",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-26 16:04:40.059225",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Lead",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "campaign,call",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,34 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Reports",
+   "links": " [\n\t{\n\t\t\"type\": \"report\",\n\t\t\"name\": \"Pending Quality Review\",\n\t\t\"doctype\": \"Quality Review\",\n\t\t\"is_query_report\": 1,\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"report\",\n\t\t\"name\": \"QC Report\",\n\t\t\"doctype\": \"Quality Review\",\n\t\t\"is_query_report\": 1\n\t}\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Goal and Procedure",
+   "links": "[\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Quality Points\",\n\t\t\"label\": \"Quality Points\",\n\t\t\"description\": \"Quality Points\"\n\n\t}\n]"
+  }
+ ],
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-03-17 23:19:17.901173",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends": "Quality",
+ "extends_another_page": 1,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Reports",
+ "modified": "2020-04-17 13:18:12.016114",
+ "modified_by": "Administrator",
+ "module": "B2B supervisor",
+ "name": "Reports",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}

@@ -1,0 +1,64 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Database",
+   "links": "[\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Campaign Organization\",\n                    \"label\":\"Campaign Organization\",\n                    \"description\":\"Campaign Organization\",\n                    \"onboard\": 1\n                },\n\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Contact\",\n                    \"label\": \"Contact\",\n                    \"description\": \"Contact\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Address\",\n                    \"label\":\"Address\",\n                    \"description\":\"Address\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Daily Lead\",\n                    \"label\": \"Daily Lead\",\n                    \"description\": \"Daily Lead\"\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Lead Per Organization\",\n                    \"label\":\"Lead Per Organization\",\n                    \"description\":\"Lead Per Organization\"\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Invoice Build Up\",\n                    \"label\":\"To Be Invoiced\",\n                    \"description\":\"To Be Invoiced\"\n                }\n            ]",
+
+  },
+  {
+   "hidden": 0,
+   "label": "Settings",
+   "links": " [\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Campaign Setting\",\n                    \"label\": \"Campaign Setting\",\n                    \"description\": \"Campaign Setting\"\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Industry Type\",\n                    \"label\": \"Main Industry\",\n                    \"description\": \"Industry\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Sub Industry Type\",\n                    \"label\": \"Sub Industry\",\n                    \"description\": \"Sub Industry Type\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Revenue Size\",\n                    \"label\": \"Revenue Size\",\n                    \"description\": \"Revenue Size\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Employee Size\",\n                    \"label\": \"Employee Size\",\n                    \"description\": \"Employee Size\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Campaign Types\",\n                    \"label\": \"Campaign Types\",\n                    \"description\": \"Campaign Types\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Job Function\",\n                    \"label\": \"Job Function\",\n                    \"description\": \"Job Function\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Level\",\n                    \"label\": \"Level\",\n                    \"description\": \"Level\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Title\",\n                    \"label\": \"Title\",\n                    \"description\": \"Title\",\n                    \"onboard\": 1\n                },\n                {\n                    \"type\": \"doctype\",\n                    \"name\": \"Campaign Department\",\n                    \"label\": \"Department\",\n                    \"description\": \"Department\",\n                    \"onboard\": 1\n                }\n            ]"
+  },
+  {
+   "hidden": 0,
+   "label": "Setup",
+   "links": " [\n    {\n        \"type\": \"doctype\",\n        \"name\": \"LinkedIn User Setting\",\n        \"label\":\"LinkedIn User Setting\",\n        \"description\":\"LinkedIn User Setting\"\n    }\n]"
+  }
+ ],
+ "category": "Modules",
+ "charts": [
+  {
+   "chart_name": "Daily Lead",
+   "label": "Daily Lead"
+  }
+ ],
+ "charts_label": "Daily Lead Dashboard",
+ "creation": "2020-03-11 13:47:28.439214",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "icon": "octicon octicon-radio-tower",
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Marketing",
+ "modified": "2020-04-17 13:16:04.949686",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Marketing",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "label": "Campaigns Designer",
+   "link_to": "Campaigns Designer",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "label": "Organization Creation Tool",
+   "link_to": "Organization Creation Tool",
+   "type": "DocType"
+  },
+  {
+   "label": "Organization Contacts",
+   "link_to": "Organization Contacts",
+   "type": "Report"
+  }
+ ],
+ "shortcuts_label": "SHORTCUTS"
+}

@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:agent",
+ "creation": "2021-10-11 17:32:45.657499",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agent",
+  "datetime",
+  "column_break_2",
+  "status",
+  "dialer",
+  "call_list_section",
+  "start_campaign_call_list",
+  "next_call"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agent",
+   "options": "Agents",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Offline",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOnline\nOffline\nBreak-Start\nBreak-End",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call_list_section",
+   "fieldtype": "Section Break",
+   "label": "Call List"
+  },
+  {
+   "fieldname": "start_campaign_call_list",
+   "fieldtype": "Table",
+   "label": "Start Campaign Call List",
+   "options": "Start Campaign Call List"
+  },
+  {
+   "fieldname": "dialer",
+   "fieldtype": "Data",
+   "label": "Dialer",
+   "options": "Phone"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Online\"",
+   "fieldname": "next_call",
+   "fieldtype": "Button",
+   "label": "Next Call"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-12 17:18:44.268950",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Start Campaign",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

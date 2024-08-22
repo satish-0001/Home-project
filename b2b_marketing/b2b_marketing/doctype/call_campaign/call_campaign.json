@@ -1,0 +1,587 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2021-10-13 11:53:45.844747",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "login_information_section",
+  "check_in",
+  "break_end",
+  "current_status",
+  "agent",
+  "column_break_3",
+  "break_start",
+  "select_campaign",
+  "column_break_5",
+  "check_out",
+  "campaign",
+  "column_break_11",
+  "qsession_start",
+  "qsession_end",
+  "daily_limit_reach",
+  "organization_limit_reach",
+  "calling_section_section",
+  "phone",
+  "mobile_phone",
+  "column_break_15",
+  "organization_phone",
+  "corporate_phone",
+  "calling_configuration_column",
+  "dialing",
+  "call",
+  "scheduled_queue",
+  "column_break_9lepu",
+  "dialing_speed",
+  "status",
+  "disposal",
+  "campaign_information_section",
+  "supervisor",
+  "delivery_target",
+  "column_break_20",
+  "campaign_expected_start",
+  "daily_cap",
+  "column_break_ikfvu",
+  "campaign_expected_end",
+  "lead_per_organization",
+  "column_break_wikdm",
+  "campaign_status",
+  "notes",
+  "contact_information_section",
+  "contact_details_column",
+  "contact",
+  "contact_name",
+  "first_name",
+  "last_name",
+  "full_name",
+  "email",
+  "title",
+  "department",
+  "city",
+  "state",
+  "country",
+  "column_break_l01is",
+  "organization",
+  "organization_name",
+  "employees",
+  "website",
+  "annual_revenue",
+  "industry",
+  "seo_description",
+  "calls_section",
+  "end_time",
+  "start_campaign_call_list",
+  "start_time",
+  "call_start",
+  "script_section",
+  "script"
+ ],
+ "fields": [
+  {
+   "fieldname": "login_information_section",
+   "fieldtype": "Section Break",
+   "label": "Login Information"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Offline\"",
+   "fieldname": "check_in",
+   "fieldtype": "Button",
+   "label": "Check In"
+  },
+  {
+   "default": "Offline",
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Current Status",
+   "options": "\nOnline\nOn Break\nOffline\nQuality Session",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fieldname": "break_start",
+   "fieldtype": "Button",
+   "label": "Break Start"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Online\" || doc.current_status == \"On Break\" || doc.current_status == \"Quality Session\"",
+   "fieldname": "check_out",
+   "fieldtype": "Button",
+   "label": "Check Out"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"On Break\"",
+   "fieldname": "break_end",
+   "fieldtype": "Button",
+   "label": "Break End"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fieldname": "campaign_information_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Information"
+  },
+  {
+   "depends_on": "eval:doc.agent",
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "options": "Campaigns",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.agent_name",
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Agents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.daily_cap",
+   "fieldname": "daily_cap",
+   "fieldtype": "Int",
+   "label": "Daily Cap",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.delivery_target",
+   "fieldname": "delivery_target",
+   "fieldtype": "Int",
+   "label": "Delivery Target",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.lead_company_count",
+   "fieldname": "lead_per_organization",
+   "fieldtype": "Int",
+   "label": "Lead Per Organization",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.status",
+   "fieldname": "campaign_status",
+   "fieldtype": "Select",
+   "label": "Campaign Status",
+   "options": "To Start\nRunning\nCancelled\nCompleted\nPast Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.dialing",
+   "fieldname": "dialing",
+   "fieldtype": "Select",
+   "label": "Dialing",
+   "options": "Auto\nManual",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.dialer_speed",
+   "fieldname": "dialing_speed",
+   "fieldtype": "Select",
+   "label": "Dialing Speed",
+   "options": "Continuous\nIntermediate",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fetch_from": "call.contact",
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Campaign Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact.full_name",
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "label": "Contact Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fetch_from": "call.organization",
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Campaign Organization",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.or_name",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fetch_from": "call.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fetch_from": "call.scheduled_queue",
+   "fieldname": "scheduled_queue",
+   "fieldtype": "Int",
+   "label": "Scheduled Queue",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fetch_from": "call.call_disposal",
+   "fieldname": "disposal",
+   "fieldtype": "Read Only",
+   "label": "Disposal",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fetch_from": "call.is_daily_limit_reach",
+   "fieldname": "daily_limit_reach",
+   "fieldtype": "Check",
+   "label": "Daily Limit Reach",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fetch_from": "call.is_organization_limit_reach",
+   "fieldname": "organization_limit_reach",
+   "fieldtype": "Check",
+   "label": "Organization Limit Reach",
+   "read_only": 1
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Agents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call",
+   "fieldtype": "Link",
+   "label": "Call",
+   "options": "Call",
+   "read_only": 1
+  },
+  {
+   "fieldname": "calls_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Calls"
+  },
+  {
+   "fieldname": "start_campaign_call_list",
+   "fieldtype": "Table",
+   "label": "Start Campaign Call List",
+   "options": "Start Campaign Call List"
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.expected_start",
+   "fieldname": "campaign_expected_start",
+   "fieldtype": "Date",
+   "label": "Campaign Expected Start",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.campaign",
+   "fetch_from": "campaign.expected_end",
+   "fieldname": "campaign_expected_end",
+   "fieldtype": "Date",
+   "label": "Campaign Expected End",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "default": "0",
+   "fieldname": "call_start",
+   "fieldtype": "Check",
+   "label": "Call Start",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qsession_start",
+   "fieldtype": "Button",
+   "label": "Quality Session Start"
+  },
+  {
+   "fieldname": "qsession_end",
+   "fieldtype": "Button",
+   "label": "Quality Session End"
+  },
+  {
+   "depends_on": "eval:doc.agent",
+   "description": "Showing only Running Campaigns for Selected Agent ",
+   "fieldname": "select_campaign",
+   "fieldtype": "Select",
+   "label": "Select Campaign"
+  },
+  {
+   "fieldname": "script_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Script"
+  },
+  {
+   "fieldname": "script",
+   "fieldtype": "HTML",
+   "label": "Script"
+  },
+  {
+   "depends_on": "eval:doc.call",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "corporate_phone",
+   "fieldtype": "Data",
+   "label": "Corporate Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "mobile_phone",
+   "fieldtype": "Data",
+   "label": "Mobile Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "organization_phone",
+   "fieldtype": "Data",
+   "label": "Organization Phone",
+   "options": "Phone"
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_l01is",
+   "fieldtype": "Column Break",
+   "label": "<b>Organization Details</b>"
+  },
+  {
+   "fetch_from": "contact.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.employees",
+   "fieldname": "employees",
+   "fieldtype": "Data",
+   "label": "#Employees"
+  },
+  {
+   "fetch_from": "organization.annual_revenue",
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue"
+  },
+  {
+   "fieldname": "column_break_ikfvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wikdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "call.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "call.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fetch_from": "call.industry",
+   "fieldname": "industry",
+   "fieldtype": "Data",
+   "label": "Industry"
+  },
+  {
+   "fetch_from": "call.website",
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "depends_on": "eval:doc.current_status == \"Online\"",
+   "fieldname": "calling_section_section",
+   "fieldtype": "Section Break",
+   "label": "Calling Section"
+  },
+  {
+   "fieldname": "calling_configuration_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9lepu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "contact_details_column",
+   "fieldtype": "Column Break",
+   "label": "<b>Contact Details</b>"
+  },
+  {
+   "fetch_from": "call.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Table MultiSelect",
+   "label": "Title",
+   "options": "Title Table"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Table MultiSelect",
+   "label": "Department",
+   "options": "Department Table"
+  },
+  {
+   "fetch_from": "call.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fetch_from": "call.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fetch_from": "call.country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fetch_from": "call.seo_description",
+   "fieldname": "seo_description",
+   "fieldtype": "Small Text",
+   "label": "SEO Description"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-06-24 16:56:55.339899",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Call Campaign",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "B2BMarketing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "B2B supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

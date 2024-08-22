@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:quality_name",
+ "creation": "2020-01-31 14:52:50.989060",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality_name",
+  "marks",
+  "is_falal",
+  "column_break_4",
+  "quality_goal"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "quality_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "marks",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Marks"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_falal",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Fatal"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality_goal",
+   "fieldtype": "Link",
+   "label": "Quality goal",
+   "options": "Quality Goal"
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-30 10:53:27.998751",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Quality Points",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

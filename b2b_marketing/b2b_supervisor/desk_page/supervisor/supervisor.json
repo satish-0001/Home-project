@@ -1,0 +1,43 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Database",
+   "links": " [\n    {\n        \"type\": \"doctype\",\n        \"name\": \"Agents\",\n        \"label\":\"Agents\",\n        \"description\":\"Agents\",\n        \"link\": \"Tree/Agents\",\n        \"onboard\": 1\n    },\n    {\n        \"type\": \"doctype\",\n        \"name\": \"Campaign Lead\",\n        \"label\":\"Leads\",\n        \"description\":\"Campaign Leads\",\n        \"onboard\": 1\n    }\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Report",
+   "links": "[\n    {\n        \"type\": \"report\",\n        \"name\": \"Lead Report\",\n        \"doctype\": \"Campaigns Designer\",\n        \"is_query_report\":1\n    },\n    {\n        \"type\": \"report\",\n        \"name\": \"FTE Report\",\n        \"doctype\": \"Campaigns\",\n        \"is_query_report\": 1\n    },\n    {\n        \"type\": \"report\",\n        \"name\": \"Organization Contacts\",\n        \"doctype\": \"Campaigns\",\n        \"is_query_report\": 1\n    }\n]"
+  }
+ ],
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-03-11 13:58:38.603566",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "icon": "octicon octicon-megaphone",
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Supervisor",
+ "modified": "2020-04-17 13:17:23.328732",
+ "modified_by": "Administrator",
+ "module": "B2B supervisor",
+ "name": "Supervisor",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "format": "{} Running",
+   "label": "Campaigns",
+   "link_to": "Campaigns",
+   "stats_filter": "{\"status\":\"Running\"}",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "SHORTCUTS"
+}

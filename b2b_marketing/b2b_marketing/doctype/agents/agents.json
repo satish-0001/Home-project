@@ -1,0 +1,510 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:agents_name",
+ "creation": "2019-12-07 17:41:04.116690",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_and_employee_id",
+  "agents_name",
+  "account_id",
+  "parent_agents",
+  "column_break_ojhf",
+  "agent_pool",
+  "department",
+  "lft",
+  "rgt",
+  "old_parent",
+  "column_break_srbo",
+  "enabled",
+  "robo_caller",
+  "is_group",
+  "status",
+  "employee",
+  "user",
+  "sb2",
+  "success_rate",
+  "success_rate_percentage",
+  "cb5",
+  "total_calls",
+  "cb6",
+  "quality_rating",
+  "last_update_on",
+  "quality_views",
+  "target_details_section_break",
+  "targets",
+  "total_leads_delivered",
+  "robocaller_details_tab",
+  "personality_and_voice_setting_section",
+  "personality",
+  "word_limit",
+  "column_break_xigi",
+  "voice_options",
+  "test_voice_option",
+  "column_break_njny",
+  "language",
+  "greetings_section",
+  "greeting",
+  "greetings",
+  "greeting_prompt",
+  "test_greeting",
+  "column_break_yayp",
+  "permission",
+  "permission_tags",
+  "permission_prompt",
+  "test_permission",
+  "problem_statement_section",
+  "problem_statement",
+  "problem_statement_tags",
+  "problem_statement_prompt",
+  "test_problem_statement",
+  "column_break_buss",
+  "solution",
+  "solution_tags",
+  "solution_prompt",
+  "test_solution",
+  "follow_up_section",
+  "follow_up",
+  "follow_tags",
+  "follow_up_prompt",
+  "test_follow_up",
+  "column_break_hvte"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_and_employee_id",
+   "fieldtype": "Section Break",
+   "label": "Name and Agent ID",
+   "options": "icon-user"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Group",
+   "oldfieldname": "is_group",
+   "oldfieldtype": "Select"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "lft",
+   "no_copy": 1,
+   "oldfieldname": "lft",
+   "oldfieldtype": "Int",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "rgt",
+   "no_copy": 1,
+   "oldfieldname": "rgt",
+   "oldfieldtype": "Int",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "old_parent",
+   "no_copy": 1,
+   "oldfieldname": "old_parent",
+   "oldfieldtype": "Data",
+   "print_hide": 1
+  },
+  {
+   "description": "Set targets for this Agent.",
+   "fieldname": "target_details_section_break",
+   "fieldtype": "Section Break",
+   "label": "Agent Targets",
+   "oldfieldtype": "Section Break",
+   "options": "icon-bullseye"
+  },
+  {
+   "fieldname": "targets",
+   "fieldtype": "Table",
+   "label": "Targets",
+   "oldfieldname": "target_details",
+   "oldfieldtype": "Table",
+   "options": "Agents Child"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Offline\nOnline\nOn Break\nQuality Session",
+   "read_only": 1
+  },
+  {
+   "default": "Auto",
+   "fieldname": "agent_pool",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": " Agent Pool",
+   "options": "Auto\nManual"
+  },
+  {
+   "description": "Select company name first.",
+   "fieldname": "parent_agents",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Parent Agent",
+   "oldfieldname": "parent_sales_person",
+   "oldfieldtype": "Link",
+   "options": "Agents"
+  },
+  {
+   "fieldname": "agents_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent  Name",
+   "oldfieldname": "sales_person_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Success Rate"
+  },
+  {
+   "fieldname": "total_calls",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Total Calls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_rating",
+   "fieldtype": "Rating",
+   "label": "Quality Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_id",
+   "fieldtype": "Data",
+   "label": "Account ID"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "total_leads_delivered",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Leads Delivered"
+  },
+  {
+   "fieldname": "success_rate_percentage",
+   "fieldtype": "Percent",
+   "label": "Success Rate (%)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "robo_caller",
+   "fieldtype": "Check",
+   "label": "Robo Caller"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "depends_on": "eval:doc.robo_caller == 1",
+   "fieldname": "greetings",
+   "fieldtype": "Table MultiSelect",
+   "label": "Greeting Tags",
+   "options": "Greeting Table"
+  },
+  {
+   "depends_on": "eval:doc.robo_caller == 1",
+   "fieldname": "test_greeting",
+   "fieldtype": "Button",
+   "label": "Test Greeting"
+  },
+  {
+   "depends_on": "eval:doc.robo_caller == 1",
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Language"
+  },
+  {
+   "depends_on": "eval:doc.robo_caller == 1",
+   "fieldname": "voice_options",
+   "fieldtype": "Select",
+   "label": "Voice options",
+   "options": "alloy\necho\nfable\nonyx\nnova\nshimmer"
+  },
+  {
+   "fieldname": "test_voice_option",
+   "fieldtype": "Button",
+   "label": "Test Voice option"
+  },
+  {
+   "depends_on": "eval:doc.robo_caller == 1",
+   "fieldname": "robocaller_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Robocaller Details"
+  },
+  {
+   "fieldname": "greetings_section",
+   "fieldtype": "Section Break",
+   "label": "Greeting & Permission"
+  },
+  {
+   "fieldname": "column_break_xigi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personality_and_voice_setting_section",
+   "fieldtype": "Section Break",
+   "label": "Personality and Voice Setting"
+  },
+  {
+   "fieldname": "greeting_prompt",
+   "fieldtype": "Small Text",
+   "label": "Greeting Prompt"
+  },
+  {
+   "fieldname": "column_break_yayp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "permission_tags",
+   "fieldtype": "Table MultiSelect",
+   "label": "Permission tags",
+   "options": "Permission Tags Table"
+  },
+  {
+   "fieldname": "permission_prompt",
+   "fieldtype": "Small Text",
+   "label": "Permission Prompt"
+  },
+  {
+   "fieldname": "test_permission",
+   "fieldtype": "Button",
+   "label": "Test Permission"
+  },
+  {
+   "fieldname": "problem_statement_section",
+   "fieldtype": "Section Break",
+   "label": "Problem Statement & Solution"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "problem_statement_tags",
+   "fieldtype": "Table MultiSelect",
+   "label": "Problem Statement tags",
+   "options": "Problem Statement Tags Table"
+  },
+  {
+   "fieldname": "problem_statement_prompt",
+   "fieldtype": "Small Text",
+   "label": "Problem Statement Prompt"
+  },
+  {
+   "fieldname": "column_break_buss",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_problem_statement",
+   "fieldtype": "Button",
+   "label": "Test Problem Statement"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "solution_tags",
+   "fieldtype": "Table MultiSelect",
+   "label": "Solution tags",
+   "options": "Solution Tags Tables"
+  },
+  {
+   "fieldname": "solution_prompt",
+   "fieldtype": "Small Text",
+   "label": "Solution Prompt"
+  },
+  {
+   "fieldname": "test_solution",
+   "fieldtype": "Button",
+   "label": "Test Solution"
+  },
+  {
+   "fieldname": "follow_up_section",
+   "fieldtype": "Section Break",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "follow_up_prompt",
+   "fieldtype": "Small Text",
+   "label": "Follow up Prompt"
+  },
+  {
+   "fieldname": "column_break_hvte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_follow_up",
+   "fieldtype": "Button",
+   "label": "Test Follow up"
+  },
+  {
+   "fieldname": "column_break_ojhf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_srbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Explain the character of this robo-caller in 200 words that it will play during the call campaigns.",
+   "fieldname": "personality",
+   "fieldtype": "Small Text",
+   "label": "Personality"
+  },
+  {
+   "fieldname": "column_break_njny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "greeting",
+   "fieldtype": "Heading",
+   "label": "Greeting"
+  },
+  {
+   "fieldname": "permission",
+   "fieldtype": "Heading",
+   "label": "Permission"
+  },
+  {
+   "fieldname": "problem_statement",
+   "fieldtype": "Heading",
+   "label": "Problem Statement"
+  },
+  {
+   "fieldname": "solution",
+   "fieldtype": "Heading",
+   "label": "Solution"
+  },
+  {
+   "fieldname": "follow_up",
+   "fieldtype": "Heading",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "word_limit",
+   "fieldtype": "Int",
+   "label": "Word Limit"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "follow_tags",
+   "fieldtype": "Table MultiSelect",
+   "label": "Follow up Tags",
+   "options": "Follow Up Tags Table"
+  },
+  {
+   "fieldname": "last_update_on",
+   "fieldtype": "Date",
+   "label": "Last Update On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_views",
+   "fieldtype": "Int",
+   "label": "Quality Views",
+   "read_only": 1
+  }
+ ],
+ "icon": "icon-user",
+ "links": [
+  {
+   "group": "History",
+   "link_doctype": "Chat History",
+   "link_fieldname": "agent"
+  }
+ ],
+ "modified": "2024-07-18 16:47:32.841328",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Agents",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1
+  }
+ ],
+ "search_fields": "parent_agents",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "states": []
+}

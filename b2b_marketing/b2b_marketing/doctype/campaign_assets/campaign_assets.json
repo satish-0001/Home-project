@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2019-12-06 12:09:51.036491",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attachment",
+  "column_break_1plvv",
+  "email_subject",
+  "section_break_4dbio",
+  "description",
+  "help",
+  "transaction_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "transaction_date"
+  },
+  {
+   "fieldname": "email_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "help",
+   "fieldtype": "HTML",
+   "label": "Help",
+   "options": "<h3>Help</h3>\n\n<p>Notes:</p>\n\n<ol>\n<li>Use field <code>Description</code> for Sending dynamic mail</li>\n<li>You can use any fields from contact doctype<code>Eg.{{contact}},{{full_name}}</code></li>\n</ol>"
+  },
+  {
+   "fieldname": "column_break_1plvv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4dbio",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-15 13:34:39.702228",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Assets",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2020-01-14 12:16:57.699143",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "campaign",
+  "campaign_name",
+  "date",
+  "organization",
+  "organization_name",
+  "contact",
+  "cb1",
+  "agent",
+  "supervisor",
+  "number_of_lead",
+  "daily_cap",
+  "call",
+  "call_date",
+  "call_log",
+  "dial_phone_number",
+  "opportunity"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign",
+   "options": "Campaigns",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_lead",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "daily_cap",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Daily Cap",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "YYYY. -"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call",
+   "fieldtype": "Link",
+   "label": "Call",
+   "options": "Call",
+   "read_only": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Campaign Organization",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.name",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Campaign Contact"
+  },
+  {
+   "fieldname": "dial_phone_number",
+   "fieldtype": "Data",
+   "label": "Dial Phone Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call_date",
+   "fieldtype": "Date",
+   "label": "Call Date"
+  },
+  {
+   "fetch_from": "campaign.campaigns_name",
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "label": "Campaign Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Agents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Agents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call_log",
+   "fieldtype": "Link",
+   "label": "Call Log",
+   "options": "Call Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Opportunity",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-02-14 00:13:11.119756",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Daily Lead",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

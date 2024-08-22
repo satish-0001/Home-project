@@ -1,0 +1,46 @@
+{
+ "creation": "2019-12-06 12:27:34.419002",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "map_field",
+  "database_field",
+  "client_db_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_db_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Database Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "map_field",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mapping Field",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "database_field",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Database Value",
+   "options": "map_field"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-06 13:40:17.302059",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Client Mapping",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

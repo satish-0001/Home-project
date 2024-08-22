@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-13 11:37:34.976371",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "greet"
+ ],
+ "fields": [
+  {
+   "fieldname": "greet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "greet",
+   "options": "Greetings Tag"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-27 12:21:36.155495",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Greeting Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

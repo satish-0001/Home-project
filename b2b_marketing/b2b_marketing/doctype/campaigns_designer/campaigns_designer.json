@@ -1,0 +1,510 @@
+{
+ "actions": [],
+ "creation": "2019-12-05 18:53:05.760541",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "customer",
+  "image",
+  "campaing_type",
+  "cb7",
+  "campaign_name",
+  "agent_name",
+  "company",
+  "disabled",
+  "total_available_contacts",
+  "sb1",
+  "start_on",
+  "cb1",
+  "end_on",
+  "cb2",
+  "days",
+  "sb2",
+  "delivery_target",
+  "cb3",
+  "daily_cap",
+  "cb4",
+  "lead_company_count",
+  "sb5",
+  "assets",
+  "email_section",
+  "auto_send_email",
+  "email_template",
+  "user_email_id",
+  "sb18",
+  "fetch_agents",
+  "agents_list",
+  "sb6",
+  "invoice_policy",
+  "currency",
+  "lead_call_fixed_price",
+  "cb20",
+  "invoicing_frequency",
+  "cost_center",
+  "sb22",
+  "campaign_requirement",
+  "calling_script_section",
+  "script_template",
+  "script",
+  "suppression_tab",
+  "sb11",
+  "contract_suppression",
+  "sb12",
+  "company_suppression",
+  "sb13",
+  "client_mapping",
+  "sb10",
+  "abm_list",
+  "contact_filter_section",
+  "max_number_of_contacts",
+  "filter_contact",
+  "filters",
+  "contact_filters",
+  "section_break_54",
+  "contact_list",
+  "get_contact",
+  "sb19",
+  "quality",
+  "sb14",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Campaign Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "campaing_type",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign Type",
+   "options": "Campaign Types",
+   "reqd": 1
+  },
+  {
+   "description": "Only For Reference",
+   "fieldname": "campaign_requirement",
+   "fieldtype": "Text Editor",
+   "label": "Campaign Requirement"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_on",
+   "fieldtype": "Date",
+   "label": "End On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Read Only",
+   "label": "Working Days"
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Number of leads to be delivered to the customer at the end of the campaign. Set 'Zero' for no limit",
+   "fieldname": "delivery_target",
+   "fieldtype": "Int",
+   "label": "Delivery Target",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Maximum lead to be delivered everyday  during the campaign.Set 'Zero' for no limit",
+   "fieldname": "daily_cap",
+   "fieldtype": "Int",
+   "label": "Daily Cap"
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Maximum contacts  per Organization.Set 'Zero' for no limit",
+   "fieldname": "lead_company_count",
+   "fieldtype": "Int",
+   "label": "Lead Per Organization"
+  },
+  {
+   "fieldname": "cb7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Campaigns Designer",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disabled"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "assets",
+   "fieldtype": "Table",
+   "label": "Asset",
+   "options": "Campaign Assets"
+  },
+  {
+   "fieldname": "sb6",
+   "fieldtype": "Tab Break",
+   "label": "Invoicing"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "contract_suppression",
+   "fieldtype": "Table",
+   "label": "Email List",
+   "options": "Campaign Contract Suppression"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "company_suppression",
+   "fieldtype": "Table",
+   "label": "Domain List",
+   "options": "Campaign Company Suppression"
+  },
+  {
+   "fieldname": "client_mapping",
+   "fieldtype": "Table",
+   "label": "Mapping",
+   "options": "Campaign Client Mapping"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb10",
+   "fieldtype": "Tab Break",
+   "label": "ABM List Uploaded"
+  },
+  {
+   "fieldname": "sb11",
+   "fieldtype": "Section Break",
+   "label": "Contact Suppression"
+  },
+  {
+   "fieldname": "sb12",
+   "fieldtype": "Section Break",
+   "label": "Organization Suppression"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb13",
+   "fieldtype": "Tab Break",
+   "label": "Client Mapping"
+  },
+  {
+   "fieldname": "sb14",
+   "fieldtype": "Section Break",
+   "label": "Amended"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "abm_list",
+   "fieldtype": "Table",
+   "label": "ABM List",
+   "options": "ABM List"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Supervisor ",
+   "options": "Agents",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb18",
+   "fieldtype": "Tab Break",
+   "label": "Agents"
+  },
+  {
+   "fieldname": "agents_list",
+   "fieldtype": "Table",
+   "label": " Agents List",
+   "options": "Campaign Agent Child"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contact_list",
+   "fieldtype": "Table",
+   "label": "Contact",
+   "options": "Call Contact Child"
+  },
+  {
+   "default": "0",
+   "fieldname": "get_contact",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Get Contact",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb19",
+   "fieldtype": "Tab Break",
+   "label": "Quality"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Table",
+   "label": "Quality",
+   "options": "Campaigns Quality Child"
+  },
+  {
+   "fieldname": "invoice_policy",
+   "fieldtype": "Select",
+   "label": "Invoice Policy",
+   "options": "\nCharge Per Lead\nCharge Per Call\nFixed Charge\nFree Campaign",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cb20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "fieldname": "invoicing_frequency",
+   "fieldtype": "Select",
+   "label": "Invoicing Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nCampaign Complete"
+  },
+  {
+   "depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "fieldname": "lead_call_fixed_price",
+   "fieldtype": "Currency",
+   "label": "Charge",
+   "mandatory_depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "options": "currency"
+  },
+  {
+   "depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "mandatory_depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "options": "Currency"
+  },
+  {
+   "depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "mandatory_depends_on": "eval:doc.invoice_policy != \"Free Campaign\"",
+   "options": "Cost Center"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "calling_script_section",
+   "fieldtype": "Tab Break",
+   "label": "Calling Script"
+  },
+  {
+   "fieldname": "script_template",
+   "fieldtype": "Link",
+   "label": " Script Template",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "script_template.terms",
+   "fetch_if_empty": 1,
+   "fieldname": "script",
+   "fieldtype": "Text Editor",
+   "label": "Script"
+  },
+  {
+   "fetch_from": "customer_name.customer_name",
+   "fieldname": "customer",
+   "fieldtype": "Read Only",
+   "label": "Customer Name"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "email_section",
+   "fieldtype": "Section Break",
+   "label": "Email"
+  },
+  {
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_54",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "contact_filter_section",
+   "fieldtype": "Tab Break",
+   "label": "Contact Filter"
+  },
+  {
+   "fieldname": "filter_contact",
+   "fieldtype": "Code",
+   "label": "Filter Contact"
+  },
+  {
+   "fetch_from": "customer_name.image",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_available_contacts",
+   "fieldtype": "Int",
+   "label": "Total Available Contacts",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.docstatus == 0",
+   "fieldname": "fetch_agents",
+   "fieldtype": "Button",
+   "label": "Fetch Agents"
+  },
+  {
+   "fieldname": "suppression_tab",
+   "fieldtype": "Tab Break",
+   "label": "Suppression"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "max_number_of_contacts",
+   "fieldtype": "Int",
+   "label": "Max number of Contacts"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "filters",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Filters"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contact_filters",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Contact Filters"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_send_email",
+   "fieldtype": "Check",
+   "label": "Auto Send Email"
+  },
+  {
+   "depends_on": "eval:doc.auto_send_email==1;",
+   "fieldname": "user_email_id",
+   "fieldtype": "Data",
+   "label": "User Email Id",
+   "mandatory_depends_on": "eval:doc.auto_send_email==1;"
+  }
+ ],
+ "image_field": "image",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-02 10:19:38.851054",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaigns Designer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

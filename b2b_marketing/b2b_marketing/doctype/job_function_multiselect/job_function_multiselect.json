@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2020-02-01 11:27:21.363959",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_function"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_function",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Function",
+   "options": "Job Function",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-02-01 11:29:06.084948",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Job function Multiselect",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,32 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2020-02-15 19:39:13.883951",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-09 15:14:08.088696",
+ "modified_by": "Administrator",
+ "module": "Agent",
+ "name": "Organization Contacts",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Campaigns",
+ "report_name": "Organization Contacts",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "B2BMarketing Manager"
+  },
+  {
+   "role": "B2B supervisor"
+  },
+  {
+   "role": "B2BMarketing User"
+  }
+ ]
+}

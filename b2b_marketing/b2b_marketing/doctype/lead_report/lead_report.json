@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "creation": "2020-01-27 11:34:52.890731",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "email",
+  "organization",
+  "organization_num",
+  "title",
+  "column_break_7",
+  "address",
+  "city",
+  "state",
+  "postal_code",
+  "country",
+  "seniority",
+  "section_break_17",
+  "employees",
+  "sub_industry",
+  "main_industry",
+  "website",
+  "revenue_size",
+  "employee_link",
+  "organization_link",
+  "column_break_26",
+  "domain",
+  "lead",
+  "customer",
+  "campaign",
+  "call_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "options": "Campaigns"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Campaign Lead"
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "label": "Domain"
+  },
+  {
+   "fieldname": "organization_link",
+   "fieldtype": "Data",
+   "label": "Organization Link"
+  },
+  {
+   "fieldname": "employee_link",
+   "fieldtype": "Data",
+   "label": "Employee Link"
+  },
+  {
+   "fieldname": "revenue_size",
+   "fieldtype": "Data",
+   "label": "Revenue Size"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "main_industry",
+   "fieldtype": "Data",
+   "label": "Main Industry"
+  },
+  {
+   "fieldname": "sub_industry",
+   "fieldtype": "Data",
+   "label": "Sub Industry"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Pin code"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "organization_num",
+   "fieldtype": "Data",
+   "label": "Organization Number"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Organization",
+   "options": "Campaign Organization"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call_id",
+   "fieldtype": "Link",
+   "label": "Call",
+   "options": "Call"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Data",
+   "label": "#Employees"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "label": "Title"
+  },
+  {
+   "fieldname": "seniority",
+   "fieldtype": "Text",
+   "label": "Seniority"
+  }
+ ],
+ "links": [],
+ "modified": "2023-03-20 14:55:04.485691",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Lead Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

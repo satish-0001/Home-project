@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2020-02-01 11:03:03.466322",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "revenue_size"
+ ],
+ "fields": [
+  {
+   "fieldname": "revenue_size",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Revenue Size",
+   "options": "Revenue Size",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-02-01 11:13:46.699196",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Revenue Size Multiselect",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2020-01-14 17:32:55.601471",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "campaign",
+  "organization",
+  "cb1",
+  "lead_count",
+  "lead_per_organization",
+  "call"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign",
+   "options": "Campaigns",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Organization",
+   "options": "Campaign Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Lead Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "YYYY. -"
+  },
+  {
+   "fieldname": "lead_per_organization",
+   "fieldtype": "Int",
+   "label": "Lead Per Organization",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call",
+   "fieldtype": "Link",
+   "label": "Call",
+   "options": "Call",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-09 00:15:01.164095",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Lead Per Organization",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

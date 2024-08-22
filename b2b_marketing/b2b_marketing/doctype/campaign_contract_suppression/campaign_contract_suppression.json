@@ -1,0 +1,29 @@
+{
+ "creation": "2019-12-06 12:13:43.448168",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-06 12:24:28.079260",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Contract Suppression",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

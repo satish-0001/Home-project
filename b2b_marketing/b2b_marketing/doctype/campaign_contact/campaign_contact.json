@@ -1,0 +1,406 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-02 18:49:28.359039",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contact_details_section",
+  "naming_series",
+  "full_name",
+  "first_name",
+  "email",
+  "phone",
+  "department",
+  "column_break_erlbr",
+  "last_name",
+  "email_verified",
+  "mobile_phone",
+  "seniority",
+  "column_break_oid0c",
+  "title",
+  "additional_email",
+  "corporate_phone",
+  "last_contacted",
+  "organization_details_tab",
+  "organization",
+  "website",
+  "keywords",
+  "column_break_22agq",
+  "employees",
+  "org_linkedin_url",
+  "column_break_qpqxs",
+  "industry",
+  "revenue_currency",
+  "annual_revenue",
+  "address_and_contact_section",
+  "address",
+  "org_city",
+  "org_country",
+  "column_break_ovn2l",
+  "org_state",
+  "organization_contact",
+  "web_details_tab",
+  "facebook_url",
+  "city",
+  "column_break_amwqj",
+  "linkedin_url",
+  "state",
+  "column_break_tfoyd",
+  "twitter_url",
+  "country",
+  "timezone",
+  "contact_settings_tab",
+  "dnc",
+  "wrong_number",
+  "quality_rating",
+  "last_quality_date",
+  "quality_views"
+ ],
+ "fields": [
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Table MultiSelect",
+   "in_standard_filter": 1,
+   "label": "Campaign Department",
+   "options": "Department Table"
+  },
+  {
+   "fieldname": "column_break_erlbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email_verified",
+   "fieldtype": "Select",
+   "label": "Email Verified",
+   "options": "\nVerified\nUnavailable"
+  },
+  {
+   "fieldname": "mobile_phone",
+   "fieldtype": "Data",
+   "label": "Mobile Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "seniority",
+   "fieldtype": "Link",
+   "label": "Seniority",
+   "options": "Seniority"
+  },
+  {
+   "fieldname": "column_break_oid0c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Table MultiSelect",
+   "ignore_user_permissions": 1,
+   "label": "Title",
+   "options": "Title Table"
+  },
+  {
+   "fieldname": "additional_email",
+   "fieldtype": "Data",
+   "label": "Additional Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "corporate_phone",
+   "fieldtype": "Data",
+   "label": "Corporate Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "last_contacted",
+   "fieldtype": "Date",
+   "label": "Last Contacted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Table MultiSelect",
+   "label": "Keywords",
+   "options": "Keywords Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "organization_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Organization Details"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Organization",
+   "options": "Campaign Organization"
+  },
+  {
+   "fetch_from": "organization.website",
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_22agq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "organization.employees",
+   "fieldname": "employees",
+   "fieldtype": "Int",
+   "label": "#Employees",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.linkedin_url",
+   "fieldname": "org_linkedin_url",
+   "fieldtype": "Data",
+   "label": "LinkedIn Url",
+   "options": "URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qpqxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "organization.industry",
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "label": "Industry",
+   "options": "Industry Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.annual_revenue",
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue",
+   "options": "revenue_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address And Contact"
+  },
+  {
+   "fetch_from": "organization.city",
+   "fieldname": "org_city",
+   "fieldtype": "Data",
+   "label": "Organization City",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.country",
+   "fieldname": "org_country",
+   "fieldtype": "Link",
+   "label": "Organization Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ovn2l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "organization.state",
+   "fieldname": "org_state",
+   "fieldtype": "Data",
+   "label": "Organization State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "web_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Web Details"
+  },
+  {
+   "fieldname": "facebook_url",
+   "fieldtype": "Data",
+   "label": "Facebook Url",
+   "options": "URL"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "column_break_amwqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linkedin_url",
+   "fieldtype": "Data",
+   "label": "LinkedIn Url",
+   "options": "URL"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "column_break_tfoyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "twitter_url",
+   "fieldtype": "Data",
+   "label": "Twitter Url",
+   "options": "URL"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "contact_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "dnc",
+   "fieldtype": "Check",
+   "label": "Is DNC"
+  },
+  {
+   "fetch_from": "organization.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.company_phone",
+   "fieldname": "organization_contact",
+   "fieldtype": "Data",
+   "label": "Organization Contact",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "organization.revenue_currency",
+   "fieldname": "revenue_currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Revenue Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_quality_date",
+   "fieldtype": "Date",
+   "label": "Last Quality Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CC-.#######"
+  },
+  {
+   "fieldname": "timezone",
+   "fieldtype": "Autocomplete",
+   "label": "Time Zone"
+  },
+  {
+   "default": "0",
+   "fieldname": "wrong_number",
+   "fieldtype": "Check",
+   "label": "Wrong Number"
+  },
+  {
+   "fieldname": "quality_rating",
+   "fieldtype": "Rating",
+   "label": "Quality Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_views",
+   "fieldtype": "Int",
+   "label": "Quality Views",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-18 12:57:12.215948",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Contact",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "organization",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}

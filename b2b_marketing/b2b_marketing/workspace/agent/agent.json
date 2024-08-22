@@ -1,0 +1,110 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Call\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Database\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2021-09-09 15:09:12.894062",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Agent",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Database",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organization",
+   "link_count": 0,
+   "link_to": "HD Organization",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contact",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Organization Contacts",
+   "link_count": 0,
+   "link_to": "Organization Contacts",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agent Log",
+   "link_count": 0,
+   "link_to": "Agent Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-02-14 00:27:56.224958",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Agent",
+ "number_cards": [],
+ "owner": "ngavde@dexciss.com",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "B2B Marketing Manager"
+  },
+  {
+   "role": "B2B Marketing User"
+  },
+  {
+   "role": "B2B supervisor"
+  },
+  {
+   "role": "B2BMarketing Manager"
+  },
+  {
+   "role": "B2BMarketing User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 49.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Call",
+   "link_to": "Call",
+   "type": "DocType"
+  }
+ ],
+ "title": "Agent"
+}

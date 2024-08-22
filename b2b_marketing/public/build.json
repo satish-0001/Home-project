@@ -1,0 +1,5 @@
+{
+  "js/organization.min.js": [
+    "public/js/utils/organization_quick_entry.js"
+  ]
+}

@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-22 17:45:22.049123",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "or_name",
+  "organization_details_section",
+  "linkedin_url",
+  "annual_revenue",
+  "revenue_currency",
+  "column_break_ke8yg",
+  "employees",
+  "fb_url",
+  "industry",
+  "sub_industry",
+  "column_break_ib4fx",
+  "website",
+  "twitter_url",
+  "founded_year",
+  "domain",
+  "section_break_ptyvp",
+  "keywords",
+  "sic_codes",
+  "column_break_zkmj1",
+  "seo_description",
+  "address_and_contact_tab",
+  "address",
+  "city",
+  "country",
+  "quality_rating",
+  "last_quality_date",
+  "column_break_e4cod",
+  "company_phone",
+  "state",
+  "postal_code",
+  "quality_views"
+ ],
+ "fields": [
+  {
+   "fieldname": "organization_details_section",
+   "fieldtype": "Section Break",
+   "label": "Organization Details"
+  },
+  {
+   "fieldname": "linkedin_url",
+   "fieldtype": "Data",
+   "label": "Company LinkedIn URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "Annual Revenue",
+   "options": "revenue_currency"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Industry",
+   "options": "Industry Type"
+  },
+  {
+   "fieldname": "column_break_ke8yg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Int",
+   "label": "#Employees"
+  },
+  {
+   "fieldname": "fb_url",
+   "fieldtype": "Data",
+   "label": "Company Facebook URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "revenue_currency",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Revenue Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "sub_industry",
+   "fieldtype": "Link",
+   "label": "Sub Industry",
+   "options": "Sub Industry Type"
+  },
+  {
+   "fieldname": "column_break_ib4fx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "twitter_url",
+   "fieldtype": "Data",
+   "label": "Company Twitter URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "founded_year",
+   "fieldtype": "Data",
+   "label": "Founded Year"
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "label": "Domain"
+  },
+  {
+   "fieldname": "section_break_ptyvp",
+   "fieldtype": "Section Break",
+   "label": "Bio"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "keywords",
+   "fieldtype": "Table MultiSelect",
+   "label": "Keywords",
+   "options": "Keywords Table"
+  },
+  {
+   "fieldname": "sic_codes",
+   "fieldtype": "Table MultiSelect",
+   "label": "SIC Codes",
+   "options": "SIC Codes Table"
+  },
+  {
+   "fieldname": "column_break_zkmj1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seo_description",
+   "fieldtype": "Small Text",
+   "label": "SEO Description"
+  },
+  {
+   "fieldname": "address_and_contact_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address & Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "company_phone",
+   "fieldtype": "Data",
+   "label": "Company Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_e4cod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "or_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Organization Name"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CO-.######"
+  },
+  {
+   "fieldname": "quality_rating",
+   "fieldtype": "Rating",
+   "label": "Quality Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_quality_date",
+   "fieldtype": "Date",
+   "label": "Last Quality Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_views",
+   "fieldtype": "Int",
+   "label": "Quality Views",
+   "read_only": 1
+  }
+ ],
+ "links": [
+  {
+   "group": "Campaign",
+   "link_doctype": "Campaign Contact",
+   "link_fieldname": "organization"
+  }
+ ],
+ "modified": "2024-07-18 13:06:02.092574",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Campaign Organization",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B Marketing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B Marketing User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "or_name",
+ "track_changes": 1
+}

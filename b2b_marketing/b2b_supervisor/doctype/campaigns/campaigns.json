@@ -1,0 +1,349 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2019-12-07 16:53:28.915453",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "campaigns_name",
+  "customer_name",
+  "start_on",
+  "expected_start",
+  "expected_end",
+  "cb1",
+  "naming_series",
+  "status",
+  "hidden_check",
+  "agent_name",
+  "company",
+  "total_available_contacts",
+  "sb20",
+  "delivery_target",
+  "cb20",
+  "daily_cap",
+  "cb21",
+  "lead_company_count",
+  "sb1",
+  "number_of_agents",
+  "online_agents",
+  "agents_list",
+  "invoice_section",
+  "sb3",
+  "callable_contact",
+  "dialing",
+  "prospect_order",
+  "cb4",
+  "outside",
+  "dialer_speed",
+  "intermediate_time",
+  "assets_section",
+  "assets",
+  "sb2",
+  "script_template",
+  "email_template",
+  "script",
+  "sb15",
+  "contact_list",
+  "campaigns_designer_filter"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaigns_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign Name",
+   "options": "Campaigns Designer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "To Start",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "To Start\nRunning\nCancelled\nCompleted\nPast Due",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_on",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Started On"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": " AGENT INFORMATION "
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Tab Break",
+   "label": "Script"
+  },
+  {
+   "fieldname": "script_template",
+   "fieldtype": "Link",
+   "label": "Script Template",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "script_template.terms",
+   "fieldname": "script",
+   "fieldtype": "Text Editor",
+   "label": "Script"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb3",
+   "fieldtype": "Tab Break",
+   "label": "Calling Configuration"
+  },
+  {
+   "depends_on": "eval:doc.dialing == \"Auto\"",
+   "fieldname": "dialer_speed",
+   "fieldtype": "Select",
+   "label": "Dialer Speed",
+   "options": "Continuous\nIntermediate"
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dialing",
+   "fieldtype": "Select",
+   "label": "Dialing",
+   "options": "Auto\nManual"
+  },
+  {
+   "fieldname": "prospect_order",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Prospect Order",
+   "options": "Quality Lifo\nQuality Fifo\nRandom\nCreate Lifo\nCreate Fifo"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Agents",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agents_list",
+   "fieldtype": "Table",
+   "label": "Agent List",
+   "options": "Campaign Agent Child"
+  },
+  {
+   "fieldname": "number_of_agents",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Number Of Agents"
+  },
+  {
+   "fieldname": "online_agents",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Online Agents"
+  },
+  {
+   "description": "No of Contacts in the campaigns",
+   "fieldname": "callable_contact",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Callable Contact",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.dialer_speed == \"Intermediate\"",
+   "description": "in seconds",
+   "fieldname": "intermediate_time",
+   "fieldtype": "Int",
+   "label": "Time between auto calling "
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "CAMP-.YYYY.-"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb15",
+   "fieldtype": "Tab Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "contact_list",
+   "fieldtype": "Table",
+   "label": "Contact List",
+   "options": "Call Contact Child"
+  },
+  {
+   "fetch_from": "campaigns_name.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Invoicing Information"
+  },
+  {
+   "fieldname": "expected_start",
+   "fieldtype": "Date",
+   "label": "Expected Start",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_end",
+   "fieldtype": "Date",
+   "label": "Expected End",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "delivery_target",
+   "fieldtype": "Read Only",
+   "label": "Delivery Target"
+  },
+  {
+   "fieldname": "cb20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_cap",
+   "fieldtype": "Read Only",
+   "label": "Daily Cap"
+  },
+  {
+   "fieldname": "cb21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_company_count",
+   "fieldtype": "Read Only",
+   "label": "Lead Per Organization"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "assets_section",
+   "fieldtype": "Tab Break",
+   "label": "Assets"
+  },
+  {
+   "fieldname": "assets",
+   "fieldtype": "Table",
+   "label": "Assets",
+   "options": "Campaign Assets",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_available_contacts",
+   "fieldtype": "Int",
+   "label": "Total Available Contacts",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "hidden_check",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "hidden check"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "campaigns_designer_filter",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "campaigns_designer_filter",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "outside",
+   "fieldtype": "Check",
+   "label": "Allow calling outside preferred time slots?"
+  },
+  {
+   "fetch_from": "campaigns_name.email_template",
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-22 12:20:03.901008",
+ "modified_by": "Administrator",
+ "module": "B2B supervisor",
+ "name": "Campaigns",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2B supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "B2BMarketing User",
+   "share": 1
+  }
+ ],
+ "search_fields": "campaigns_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,92 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"RlK0URKgAh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TryAO2wJHI\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports &amp; Masters</span>\",\"col\":12}},{\"id\":\"TnkAqxjRrF\",\"type\":\"card\",\"data\":{\"card_name\":\"Goal and Procedure\",\"col\":4}},{\"id\":\"_syE8k0E9B\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2021-09-22 15:09:30.101502",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Quality_Extends",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Goal and Procedure",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Points",
+   "link_count": 0,
+   "link_to": "Quality Points",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pending Quality Review",
+   "link_count": 0,
+   "link_to": "Quality Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "QC Report",
+   "link_count": 0,
+   "link_to": "QC Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-02-14 00:26:39.855546",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Quality_Extends",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "B2B Marketing Manager"
+  },
+  {
+   "role": "B2B Marketing User"
+  },
+  {
+   "role": "B2B supervisor"
+  },
+  {
+   "role": "B2BMarketing Manager"
+  },
+  {
+   "role": "B2BMarketing User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 51.0,
+ "shortcuts": [],
+ "title": "Quality_Extends"
+}

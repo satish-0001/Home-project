@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include b2b_marketing *.css
+recursive-include b2b_marketing *.csv
+recursive-include b2b_marketing *.html
+recursive-include b2b_marketing *.ico
+recursive-include b2b_marketing *.js
+recursive-include b2b_marketing *.json
+recursive-include b2b_marketing *.md
+recursive-include b2b_marketing *.png
+recursive-include b2b_marketing *.py
+recursive-include b2b_marketing *.svg
+recursive-include b2b_marketing *.txt
+recursive-exclude b2b_marketing *.pyc

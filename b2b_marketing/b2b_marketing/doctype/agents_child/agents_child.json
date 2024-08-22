@@ -1,0 +1,50 @@
+{
+ "creation": "2019-12-07 17:57:15.318798",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fiscal_year",
+  "target_cell",
+  "distribution_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "oldfieldname": "fiscal_year",
+   "oldfieldtype": "Select",
+   "options": "Fiscal Year",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "target_cell",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": " Target Calls",
+   "oldfieldname": "target_qty",
+   "oldfieldtype": "Currency"
+  },
+  {
+   "fieldname": "distribution_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Distribution",
+   "options": "Monthly Distribution",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-07 17:57:15.318798",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Agents Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

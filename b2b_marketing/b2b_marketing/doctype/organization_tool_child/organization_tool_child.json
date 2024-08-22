@@ -1,0 +1,355 @@
+{
+ "actions": [],
+ "creation": "2020-01-29 16:00:53.531180",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "organization_section",
+  "org_name",
+  "linkedin_url",
+  "annual_revenue",
+  "industry",
+  "column_break_ymnm2",
+  "employees",
+  "fb_url",
+  "revenue_currency",
+  "sub_industry",
+  "column_break_zkayb",
+  "website",
+  "twitter_url",
+  "founded_year",
+  "domain",
+  "column_break_ajvbp",
+  "organization_bio_section",
+  "keywords",
+  "sic_codes",
+  "column_break_czmuk",
+  "seo_description",
+  "organization_address_contact_section",
+  "address",
+  "section_break_wjeo2",
+  "org_city",
+  "org_country",
+  "company_phone",
+  "column_break_p7ce3",
+  "org_state",
+  "postal_code",
+  "contact_section",
+  "first_name",
+  "email",
+  "phone",
+  "ct_fb",
+  "column_break_stovy",
+  "last_name",
+  "email_verified",
+  "mobile_phone",
+  "seniority",
+  "ct_linkedin",
+  "column_break_xsy7e",
+  "title",
+  "additional_email",
+  "corporate_phone",
+  "ct_twitter",
+  "section_break_zylm5",
+  "department",
+  "contact_address_section",
+  "contact_city",
+  "contact_country",
+  "column_break_beuou",
+  "contact_state",
+  "dnc"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Small Text",
+   "label": "Campaign Department"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Contact"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "organization_section",
+   "fieldtype": "Section Break",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "#Employees",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_ymnm2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linkedin_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company LinkedIn URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Data",
+   "label": "Industry"
+  },
+  {
+   "fieldname": "fb_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Facebook URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "revenue_currency",
+   "fieldtype": "Data",
+   "label": "Revenue Currency"
+  },
+  {
+   "fieldname": "sub_industry",
+   "fieldtype": "Data",
+   "label": "Sub Industry"
+  },
+  {
+   "fieldname": "column_break_zkayb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "twitter_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Twitter URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "founded_year",
+   "fieldtype": "Data",
+   "label": "Founded Year"
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "label": "Domain"
+  },
+  {
+   "fieldname": "column_break_ajvbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "organization_bio_section",
+   "fieldtype": "Section Break",
+   "label": "Organization Bio"
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Small Text",
+   "label": "Keywords"
+  },
+  {
+   "fieldname": "sic_codes",
+   "fieldtype": "Small Text",
+   "label": "SIC Codes"
+  },
+  {
+   "fieldname": "column_break_czmuk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seo_description",
+   "fieldtype": "Small Text",
+   "label": "SEO Description"
+  },
+  {
+   "fieldname": "organization_address_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Organization Address & Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Organization Address"
+  },
+  {
+   "fieldname": "section_break_wjeo2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "org_city",
+   "fieldtype": "Data",
+   "label": "Organization City"
+  },
+  {
+   "fieldname": "org_country",
+   "fieldtype": "Data",
+   "label": "Organization Country"
+  },
+  {
+   "fieldname": "company_phone",
+   "fieldtype": "Data",
+   "label": "Organization Phone"
+  },
+  {
+   "fieldname": "column_break_p7ce3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "org_state",
+   "fieldtype": "Data",
+   "label": "Organization State"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "column_break_stovy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_verified",
+   "fieldtype": "Data",
+   "label": "Email Verified"
+  },
+  {
+   "fieldname": "mobile_phone",
+   "fieldtype": "Data",
+   "label": "Contact Mobile Phone"
+  },
+  {
+   "fieldname": "seniority",
+   "fieldtype": "Data",
+   "label": "Seniority"
+  },
+  {
+   "fieldname": "column_break_xsy7e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Long Text",
+   "label": "Title"
+  },
+  {
+   "fieldname": "additional_email",
+   "fieldtype": "Data",
+   "label": "Contact Additional Email"
+  },
+  {
+   "fieldname": "corporate_phone",
+   "fieldtype": "Data",
+   "label": "Contact Corporate Phone"
+  },
+  {
+   "fieldname": "ct_fb",
+   "fieldtype": "Data",
+   "label": "Contact Facebook URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "ct_linkedin",
+   "fieldtype": "Data",
+   "label": "Contact LinkedIn URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "ct_twitter",
+   "fieldtype": "Data",
+   "label": "Contact Twitter URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "contact_address_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Contact Address"
+  },
+  {
+   "fieldname": "contact_city",
+   "fieldtype": "Data",
+   "label": "Contact City"
+  },
+  {
+   "fieldname": "contact_country",
+   "fieldtype": "Data",
+   "label": "Contact Country"
+  },
+  {
+   "fieldname": "column_break_beuou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_state",
+   "fieldtype": "Data",
+   "label": "Contact State"
+  },
+  {
+   "default": "0",
+   "fieldname": "dnc",
+   "fieldtype": "Check",
+   "label": "DNC"
+  },
+  {
+   "fieldname": "org_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organization Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zylm5",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-20 01:46:13.979426",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Organization Tool child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

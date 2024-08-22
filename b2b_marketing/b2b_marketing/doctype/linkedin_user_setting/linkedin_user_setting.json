@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "creation": "2020-02-07 12:14:55.207108",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "set_user__linkedin_user_login_section",
+  "user_name",
+  "column_break_3",
+  "password",
+  "section_break_5",
+  "enable"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "set_user__linkedin_user_login_section",
+   "fieldtype": "Section Break",
+   "label": "Set User  LinkedIn User Login"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2020-02-14 13:49:06.318884",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "LinkedIn User Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

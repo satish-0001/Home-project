@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-06-13 12:53:14.754120",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "naming_series",
+  "column_break_cjhk",
+  "status",
+  "section_break_2",
+  "missing_main_industry",
+  "missing_sub_industry",
+  "create_missing_seniority",
+  "create_missing_keywords",
+  "column_break_4",
+  "missing_department",
+  "create_missing_title",
+  "create_missing_sic_codes",
+  "create_missing_country",
+  "organization_section",
+  "organizations",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "missing_main_industry",
+   "fieldtype": "Check",
+   "label": "Create missing Main Industry"
+  },
+  {
+   "default": "0",
+   "fieldname": "missing_sub_industry",
+   "fieldtype": "Check",
+   "label": "Create missing Sub Industry"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_missing_seniority",
+   "fieldtype": "Check",
+   "label": "Create Missing Seniority"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_missing_keywords",
+   "fieldtype": "Check",
+   "label": "Create Missing Keywords"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "missing_department",
+   "fieldtype": "Check",
+   "label": "Create missing Department"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_missing_title",
+   "fieldtype": "Check",
+   "label": "Create Missing Title"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_missing_sic_codes",
+   "fieldtype": "Check",
+   "label": "Create Missing SIC Codes"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_missing_country",
+   "fieldtype": "Check",
+   "label": "Create Missing Country"
+  },
+  {
+   "fieldname": "organization_section",
+   "fieldtype": "Section Break",
+   "label": "Organizations"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "organizations",
+   "fieldtype": "Table",
+   "options": "Organization Tool child"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPartially Success\nFailed\nSuccess",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "OCT-.####"
+  },
+  {
+   "fieldname": "column_break_cjhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Organization Creation Tool",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-21 15:39:13.027350",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Organization Creation Tool",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "B2BMarketing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "queue_in_background": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Failed"
+  },
+  {
+   "color": "Green",
+   "title": "Success"
+  },
+  {
+   "color": "Yellow",
+   "title": "Partially Success"
+  }
+ ],
+ "track_changes": 1
+}

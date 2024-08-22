@@ -1,0 +1,95 @@
+{
+ "cards_label": "",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-09-09 15:03:02.170985",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Supervisor",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supervisor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agents",
+   "link_to": "Agents",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_to": "Campaign Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lead Report",
+   "link_to": "Lead Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "FTE Report",
+   "link_to": "FTE Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Organization Contacts",
+   "link_to": "Organization Contacts",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2021-09-09 16:17:35.059032",
+ "modified_by": "Administrator",
+ "module": "B2B supervisor",
+ "name": "Supervisor",
+ "owner": "ngavde@dexciss.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Campaigns",
+   "link_to": "Campaigns",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "SHORTCUTS"
+}

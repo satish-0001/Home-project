@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "agents.-.log.-.####",
+ "creation": "2021-10-20 14:38:24.935998",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agents",
+  "datetime",
+  "status",
+  "campaign",
+  "column_break_5",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "agents",
+   "fieldtype": "Link",
+   "label": "Agents",
+   "options": "Agents"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Campaign",
+   "options": "Campaigns",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-24 11:20:21.743780",
+ "modified_by": "Administrator",
+ "module": "B2B Marketing",
+ "name": "Agent Log",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
